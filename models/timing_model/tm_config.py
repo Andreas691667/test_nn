@@ -1,0 +1,4 @@
+MAXIMUM_VELOCITY = 60 # deg/s
+ACCELERATION = 80 # deg/s^2
+
+
