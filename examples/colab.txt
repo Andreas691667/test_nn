@@ -1,0 +1,16 @@
+!git clone https://github.com/Andreas691667/test_nn
+!pip install -e test_nn/. --quiet
+
+import sys
+sys.path.append('/content/test_nn')
+
+trajectories = torch.load("/content/test_nn/examples/dataset/trajectories.pt")
+noisy_trajectories = torch.load("/content/test_nn/examples/dataset/noisy_trajectories.pt")
+test_trajectories = torch.load("/content/test_nn/examples/dataset/test_trajectories.pt")
+test_noisy_trajectories = torch.load("/content/test_nn/examples/dataset/test_noisy_trajectories.pt")
+
+# save model to file
+torch.save(model.state_dict(), "timing_offset_model_unidirectional.pth")
+
+from google.colab import files
+files.download("timing_offset_model_unidirectional.pth")

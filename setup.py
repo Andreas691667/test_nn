@@ -16,7 +16,8 @@ setup(
         'docker>=7.1.0', 
         'pika', 
         'requests', 
-        'pyhocon'
+        'pyhocon',
+        'tqdm'
     ],
     include_package_data=True,
 )
